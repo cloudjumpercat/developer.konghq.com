@@ -10,7 +10,8 @@ module Jekyll
             'deck'      => 'Jekyll::Drops::EntityExample::Format::Deck',
             'konnect'   => 'Jekyll::Drops::EntityExample::Format::Konnect',
             'kic'       => 'Jekyll::Drops::EntityExample::Format::KIC',
-            'ui'        => 'Jekyll::Drops::EntityExample::Format::UI'
+            'ui'        => 'Jekyll::Drops::EntityExample::Format::UI',
+            'terraform' => 'Jekyll::Drops::EntityExample::Format::Terraform'
           }
 
           def self.make_for(format:, type:, data:)
