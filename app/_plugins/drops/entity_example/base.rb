@@ -25,7 +25,7 @@ module Jekyll
         end
 
         def template
-          raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
+          @template ||= File.expand_path('app/_includes/components/entity_example.html')
         end
 
         def formats
