@@ -1,0 +1,21 @@
+{% assign example = include.example %}
+
+<div class="mt-8">
+  <div class="bg-blue-600 p-2 flex justify-between">
+    <span class="font-bold text-white">Configuration</span>
+    <div>
+      <select class="ml-1 w-36">
+        {% for format in example.formats %}
+          <option>{{ format.option }}</option>
+        {% endfor %}
+      </select>
+      <span class="ml-2 text-white">&copy;</span>
+    </div>
+  </div>
+
+  {% for format in example.formats %}
+    <div>
+      {% include {{ format.include_file }} format=format %}
+    </div>
+  {% endfor %}
+</div>

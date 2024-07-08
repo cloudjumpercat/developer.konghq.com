@@ -1,0 +1,8 @@
+{% highlight bash %}
+curl -X POST {{ include.format.url }} \
+    --header "accept: application/json" \
+    --header "Content-Type: application/json" \
+    --data '
+{{ include.format.data | json_prettify | indent | indent }}
+    '
+{% endhighlight %}
