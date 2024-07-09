@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'securerandom'
+
 module Jekyll
   module Drops
     module EntityExample
@@ -40,6 +42,10 @@ module Jekyll
 
         def type
           @type ||= @example.fetch('type')
+        end
+
+        def id
+          @id ||= SecureRandom.hex(10)
         end
       end
     end
